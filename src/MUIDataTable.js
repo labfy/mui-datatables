@@ -419,11 +419,6 @@ class MUIDataTable extends React.Component {
         totals[colIndex] = '';
       }
 
-      totals[colIndex] = window._ ? window._('Total:') : 'Total:';
-      if (colIndex > 0) {
-        totals[colIndex] = '';
-      }
-
       for (let rowIndex = 0; rowIndex < data.length; rowIndex++) {
         let value = status === TABLE_LOAD.INITIAL ? data[rowIndex][colIndex] : data[rowIndex].data[colIndex];
 
