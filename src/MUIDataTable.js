@@ -1119,7 +1119,7 @@ class MUIDataTable extends React.Component {
               </MuiTable>
             </div>
           </div>
-          <div className="body-only" style={{ overflowY: 'auto', height }}>
+          <div className="body-only" style={{ overflowY: 'auto', height: `calc(${height}px + 64px)` }}>
             <Scrollbars
               className={this.options.responsive === 'scroll' ? classes.responsiveScroll : null}
               autoHeight
