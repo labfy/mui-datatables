@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const defaultPaginationStyles = {
   root: {
+    marginTop: 0,
     '&:last-child': {
       padding: '0px 24px 0px 24px',
     },
