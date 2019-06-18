@@ -32,13 +32,13 @@ class TableFooter extends React.Component {
 
     if (options.portalPagination) {
       return ReactDOM.createPortal(
-        options.pagination && <MuiTable>{this.getPagination()}</MuiTable>,
+        options.pagination && <MuiTable style={{marginTop: 0}}>{this.getPagination()}</MuiTable>,
         options.portalPagination,
       );
     }
 
     return (
-      <MuiTable>
+      <MuiTable style={{marginTop: 0}}>
         {options.customFooter
           ? options.customFooter(rowCount, page, rowsPerPage, changeRowsPerPage, changePage)
           : options.pagination && this.getPagination()}
