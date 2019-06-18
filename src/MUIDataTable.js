@@ -444,7 +444,7 @@ class MUIDataTable extends React.Component {
           const funcResult = column.customBodyRender(value, tableMeta);
 
           if (React.isValidElement(funcResult) && funcResult.props.value) {
-            value = funcResult.props.value;
+            value = funcResult.props.vafootolue;
           } else if (typeof funcResult === 'string') {
             value = funcResult;
           }
@@ -1168,14 +1168,16 @@ class MUIDataTable extends React.Component {
                 />
               </MuiTable>
             </Scrollbars>
-            <TableFooter
-              options={this.options}
-              page={page}
-              rowCount={rowCount}
-              rowsPerPage={rowsPerPage}
-              changeRowsPerPage={this.changeRowsPerPage}
-              changePage={this.changePage}
-            />
+            <div style={{marginTop: 0}}>
+              <TableFooter
+                options={this.options}
+                page={page}
+                rowCount={rowCount}
+                rowsPerPage={rowsPerPage}
+                changeRowsPerPage={this.changeRowsPerPage}
+                changePage={this.changePage}
+              />
+            </div>
             <div className={classes.liveAnnounce} aria-live={'polite'} ref={el => (this.announceRef = el)}>
               {announceText}
             </div>
