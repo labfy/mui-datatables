@@ -1173,6 +1173,7 @@ class MUIDataTable extends React.Component {
                 options={this.options}
                 page={page}
                 rowCount={rowCount}
+                style={{marginTop: 0}}
                 rowsPerPage={rowsPerPage}
                 changeRowsPerPage={this.changeRowsPerPage}
                 changePage={this.changePage}
