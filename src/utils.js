@@ -76,4 +76,4 @@ function createCSVDownload(columns, data, options) {
   }
 }
 
-export { buildMap, getCollatorComparator, sortCompare, createCSVDownload };
+export { buildMap, getCollatorComparator, sortCompare, createCSVDownload, getPageValue };
