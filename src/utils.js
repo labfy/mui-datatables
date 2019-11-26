@@ -1,3 +1,4 @@
+
 function buildMap(rows) {
   return rows.reduce((accum, { dataIndex }) => {
     accum[dataIndex] = true;
@@ -13,6 +14,13 @@ function getCollatorComparator() {
 
   const fallbackComparator = (a, b) => a.localeCompare(b);
   return fallbackComparator;
+}
+
+function getPageValue(count, rowsPerPage, page) {
+  const totalPages = count <= rowsPerPage ? 1 : Math.ceil(count / rowsPerPage);
+
+  // `page` is 0-indexed
+  return page >= totalPages ? totalPages - 1 : page;
 }
 
 function sortCompare(order) {
